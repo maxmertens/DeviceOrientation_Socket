@@ -11,20 +11,30 @@
         <!-- JS Lib -->
         <script type="text/javascript" src="lib/jquery-3.2.1.min.js"></script>
 
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
     </head>
     <body>
 
-        <div id="log"> </div>
+      <div class="content grid">
 
-        <div id="mario-chat">
-            <h2>Test Socket</h2>
-            <div id="chat-window">
-            <div id="output"></div>
-            </div>
-            <input id="handle" type="text" placeholder="Handle" />
-            <input id="message" type="text" placeholder="Message" />
-            <button id="send">Send</button>
+        <div class="grid-item">
+          Alpha
+          <div id="alpha"></div>
         </div>
+
+        <div class="grid-item">
+          Beta
+          <div id="beta"></div>
+        </div>
+
+        <div class="grid-item">
+          Gamma
+          <div id="gamma"></div>
+        </div>
+        
+      </div>
 
     </body>
     <script src="/chat.js"></script>
