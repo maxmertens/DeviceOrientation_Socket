@@ -30,9 +30,9 @@ function process(event) {
 
 // Listen for events
 socket.on('chat', function(data){
-    document.getElementById("alpha").innerHTML = "<p>" + Math.round(data.alpha) + "</p>";
-    document.getElementById("beta").innerHTML = "<p>" + Math.round(data.beta) + "</p>";
-    document.getElementById("gamma").innerHTML = "<p>" + Math.round(data.gamma) + "</p>";
+    document.getElementById("alpha").innerHTML = "<p>" + Math.round(data.alpha) + "º" + "</p>";
+    document.getElementById("beta").innerHTML = "<p>" + Math.round(data.beta) + "º" + "</p>";
+    document.getElementById("gamma").innerHTML = "<p>" + Math.round(data.gamma) + "º" + "</p>";
 
     console.log("on");
 });
