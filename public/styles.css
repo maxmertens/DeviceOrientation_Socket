@@ -1,9 +1,10 @@
-body{
-  position: relative;
+body {
   font-family: 'Montserrat', sans-serif;
 }
 
-
+p {
+  margin: 0;
+}
 
 .content {
   position: absolute;
@@ -25,4 +26,10 @@ body{
   text-align: center;
   font-size: 60px;
   font-weight: 800;
+}
+
+.axis {
+  font-family: Roboto Mono;
+  font-size: 20px;
+  font-weight: 200;
 }
