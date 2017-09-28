@@ -1,38 +1,24 @@
 
-// x,y,z values
-var alpha, beta, gamma;
 
-// Make connection
-var socket = io();
 
-$(function() {
-  if(window.DeviceOrientationEvent) {
-    window.addEventListener("deviceorientation", process, false);
-  } else {
+main();
+
+//
+// start here
+//
+function main() {
+  const canvas = document.querySelector("#glCanvas");
+  // Initialize the GL context
+  const gl = canvas.getContext("webgl");
+
+  // Only continue if WebGL is available and working
+  if (!gl) {
+    alert("Unable to initialize WebGL. Your browser or machine may not support it.");
+    return;
   }
-});
 
-function process(event) {
-  alpha = event.alpha;
-  beta = event.beta;
-  gamma = event.gamma;
-
-  $(function() {
-    socket.emit('chat', {
-        alpha: alpha,
-        beta: beta,
-        gamma: gamma
-    });
-    console.log("emit");
-  });
+  // Set clear color to black, fully opaque
+  gl.clearColor(0.3, 0.1, 0.6, 1.0);
+  // Clear the color buffer with specified clear color
+  gl.clear(gl.COLOR_BUFFER_BIT);
 }
-
-
-// Listen for events
-socket.on('chat', function(data){
-    document.getElementById("alpha").innerHTML = "<p>" + Math.round(data.alpha) + "º" + "</p>";
-    document.getElementById("beta").innerHTML = "<p>" + Math.round(data.beta) + "º" + "</p>";
-    document.getElementById("gamma").innerHTML = "<p>" + Math.round(data.gamma) + "º" + "</p>";
-
-    console.log("on");
-});
