@@ -6,4 +6,6 @@
 npm install && npm start
 ```
 
-2. visit your IP:4000 on your phone
+2. open localhost:4000```
+
+2. open "your IP:4000" in your phones browser
