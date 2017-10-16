@@ -8,4 +8,4 @@ npm install && npm start
 
 2. open ```localhost:4000```
 
-2. open "your IP:4000" in your phones browser
+2. open ```yourComputersIp:4000``` in your phones browser
