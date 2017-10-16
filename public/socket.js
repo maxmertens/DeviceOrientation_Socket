@@ -1,6 +1,7 @@
 
 // x,y,z values
 var alpha, beta, gamma;
+var x, y, z;
 
 // Make connection
 var socket = io();
@@ -32,6 +33,10 @@ socket.on('chat', function(data){
     document.getElementById("alpha").innerHTML = "<p>" + Math.round(data.alpha) + "º" + "</p>";
     document.getElementById("beta").innerHTML = "<p>" + Math.round(data.beta) + "º" + "</p>";
     document.getElementById("gamma").innerHTML = "<p>" + Math.round(data.gamma) + "º" + "</p>";
+
+    y = data.alpha;
+    x = data.beta;
+    z = data.gamma;
 
     console.log("on");
 });
